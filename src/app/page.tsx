@@ -529,7 +529,7 @@ export default function HomePage() {
                       quality={90}
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg-dark/20 z-10" />
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent to-bg-dark/20 z-10" />
                 </div>
 
                 {/* Bottom-left image panel — shows bottom half of same image */}
@@ -547,7 +547,7 @@ export default function HomePage() {
                       quality={90}
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-transparent to-bg-dark/20 z-10" />
+                  <div className="absolute inset-0 bg-linear-to-t from-transparent to-bg-dark/20 z-10" />
                 </div>
 
                 {/* ── Decorative elements in the gap ── */}
@@ -650,7 +650,7 @@ export default function HomePage() {
 
                 {/* Dashed diagonal line through the gap */}
                 <svg
-                  className="absolute inset-0 w-full h-full z-[5] opacity-[0.15]"
+                  className="absolute inset-0 w-full h-full z-5 opacity-[0.15]"
                   viewBox="0 0 500 520"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -734,7 +734,7 @@ export default function HomePage() {
                   height={450}
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-bg-dark/30 to-transparent" />
               </div>
             </div>
           </div>
