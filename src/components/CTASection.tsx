@@ -36,7 +36,7 @@ export default function CTASection({
         {description && (
           <p
             className={`text-lg mb-8 max-w-2xl mx-auto ${
-              dark ? "text-teal-100" : "text-text-muted"
+              dark ? "text-orange-100" : "text-text-muted"
             }`}
           >
             {description}
@@ -47,7 +47,7 @@ export default function CTASection({
             href={primaryHref}
             className={`inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl btn-shimmer transition-all duration-300 hover:scale-105 ${
               dark
-                ? "bg-white text-primary-dark hover:bg-teal-50 shadow-lg"
+                ? "bg-white text-primary-dark hover:bg-orange-50 shadow-lg"
                 : "gradient-bg-animated text-white hover:shadow-lg hover:shadow-primary/20"
             }`}
           >

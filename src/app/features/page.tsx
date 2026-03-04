@@ -35,7 +35,7 @@ export default function FeaturesPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
               Features
             </h1>
-            <p className="text-lg text-teal-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-orange-100 max-w-2xl mx-auto leading-relaxed">
               Everything you need to track trips, fuel, and weekly fleet costs
               without messy spreadsheets.
             </p>

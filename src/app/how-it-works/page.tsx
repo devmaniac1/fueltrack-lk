@@ -155,7 +155,7 @@ export default function HowItWorksPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
               How it works
             </h1>
-            <p className="text-lg text-teal-100 max-w-2xl mx-auto">
+            <p className="text-lg text-orange-100 max-w-2xl mx-auto">
               A simple routine your drivers can follow and your managers can
               review weekly.
             </p>

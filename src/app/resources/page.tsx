@@ -90,7 +90,7 @@ export default function ResourcesPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
               Resources
             </h1>
-            <p className="text-lg text-teal-100 max-w-2xl mx-auto">
+            <p className="text-lg text-orange-100 max-w-2xl mx-auto">
               Practical guides and insights for fleet fuel management. Built
               from real experience with small fleets.
             </p>

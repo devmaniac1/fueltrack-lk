@@ -91,14 +91,14 @@ export default function FreeTemplatePage() {
       <section className="py-20 md:py-28 gradient-bg-animated">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-teal-200 text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-orange-200 text-xs font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
               100% Free — No signup required
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
               Free Fuel Log Template
             </h1>
-            <p className="text-lg text-teal-100 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-orange-100 max-w-2xl mx-auto mb-8">
               A ready-to-use spreadsheet for tracking trips, fuel entries, and
               weekly fleet costs. Built for small fleets in Sri Lanka.
             </p>
@@ -107,7 +107,7 @@ export default function FreeTemplatePage() {
                 href="https://forms.gle/YOUR_FORM_ID"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-primary-dark bg-white rounded-xl btn-shimmer hover:bg-teal-50 hover:scale-105 transition-all duration-300 shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-primary-dark bg-white rounded-xl btn-shimmer hover:bg-orange-50 hover:scale-105 transition-all duration-300 shadow-xl"
               >
                 Get the Free Template
                 <svg

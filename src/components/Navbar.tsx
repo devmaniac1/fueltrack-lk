@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -19,22 +20,13 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-lg gradient-bg-animated flex items-center justify-center">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-          </div>
+          <Image
+            src="/Logo.png"
+            alt="FuelTrack LK"
+            width={84}
+            height={84}
+            className="rounded-lg"
+          />
           <span className="text-lg font-bold text-primary-dark group-hover:text-primary transition-colors">
             FuelTrack <span className="text-accent font-extrabold">LK</span>
           </span>

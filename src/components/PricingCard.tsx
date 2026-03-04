@@ -35,7 +35,7 @@ export default function PricingCard({
       </h3>
       <p
         className={`text-sm mb-6 ${
-          highlighted ? "text-teal-100" : "text-text-muted"
+          highlighted ? "text-orange-100" : "text-text-muted"
         }`}
       >
         {vehicleRange}
@@ -58,7 +58,9 @@ export default function PricingCard({
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <span className={highlighted ? "text-teal-50" : "text-text-muted"}>
+            <span
+              className={highlighted ? "text-orange-50" : "text-text-muted"}
+            >
               {feature}
             </span>
           </li>
@@ -68,7 +70,7 @@ export default function PricingCard({
         href="/book-a-demo"
         className={`block w-full text-center py-3 rounded-xl font-semibold text-sm btn-shimmer transition-all duration-300 hover:scale-105 ${
           highlighted
-            ? "bg-white text-primary-dark hover:bg-teal-50"
+            ? "bg-white text-primary-dark hover:bg-orange-50"
             : "gradient-bg-animated text-white hover:shadow-lg hover:shadow-primary/20"
         }`}
       >

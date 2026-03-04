@@ -48,7 +48,7 @@ export default function BookDemoPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
               Book a demo or get the free template
             </h1>
-            <p className="text-lg text-teal-100 max-w-2xl mx-auto">
+            <p className="text-lg text-orange-100 max-w-2xl mx-auto">
               Fill the form below. We reply within 24–48 hours.
             </p>
           </div>

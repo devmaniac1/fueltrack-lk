@@ -102,6 +102,10 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-MDKHVBHM');`}
         </Script>
+        <meta
+          name="google-site-verification"
+          content="_u2fOeDffVmJsD2sfFssXMQYfPCwJDijdjjQDosKFhc"
+        />
         {/* End Google Tag Manager */}
         {GA_ID && (
           <>
