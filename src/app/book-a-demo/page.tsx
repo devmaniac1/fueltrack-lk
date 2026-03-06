@@ -65,7 +65,7 @@ export default function BookDemoPage() {
                 &quot;Both&quot; in the form. If the embed doesn&apos;t load,
                 use the{" "}
                 <a
-                  href="https://forms.gle/YOUR_FORM_ID"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe1d5RBx2oYQsszrrdbj2-I5GGzwclTuXaC6Nkb86X305TZLw/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-semibold hover:text-primary-dark underline underline-offset-2 transition-colors"
@@ -76,9 +76,9 @@ export default function BookDemoPage() {
               </p>
               <div className="rounded-xl overflow-hidden border border-border bg-bg-alt">
                 <iframe
-                  src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSe1d5RBx2oYQsszrrdbj2-I5GGzwclTuXaC6Nkb86X305TZLw/viewform?embedded=true"
                   width="100%"
-                  height="900"
+                  height="1486"
                   className="w-full"
                   title="FuelTrack LK Demo Request Form"
                 >
@@ -88,7 +88,7 @@ export default function BookDemoPage() {
               <p className="mt-4 text-xs text-text-muted text-center">
                 If the form does not load,{" "}
                 <a
-                  href="https://forms.gle/YOUR_FORM_ID"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe1d5RBx2oYQsszrrdbj2-I5GGzwclTuXaC6Nkb86X305TZLw/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary-dark underline underline-offset-2 transition-colors"
