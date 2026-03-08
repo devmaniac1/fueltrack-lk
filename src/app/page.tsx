@@ -6,14 +6,15 @@ import CTASection from "@/components/CTASection";
 import AnimatedStats from "@/components/AnimatedStats";
 
 export const metadata: Metadata = {
-  title: "FuelTrack LK | Fleet Fuel & Trip Log for Small Fleets",
+  title: "FuelTrack LK – Fleet Fuel Log System for Small Fleets",
   description:
-    "Track trips, fuel refuels, and weekly fleet costs in one place. Built for Sri Lankan fleets with 3–30 vehicles. Get the free fuel log template or book a demo.",
+    "FuelTrack LK is a fleet fuel log system for small fleets. Track trips, fuel refuels, and weekly fleet costs in one place. Built for Sri Lankan fleets with 3–30 vehicles.",
   keywords: [
-    "fleet fuel log system Sri Lanka",
-    "fuel tracking",
-    "trip logging",
-    "small fleet management",
+    "fleet fuel log system",
+    "fuel tracking app for fleets",
+    "trip log system",
+    "fleet expense tracker",
+    "small fleet management Sri Lanka",
   ],
   alternates: { canonical: "/" },
 };
@@ -80,25 +81,27 @@ export default function HomePage() {
                 Built for Sri Lankan fleets
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-text leading-tight mb-4">
-                Fuel<span className="text-primary">Track</span>{" "}
-                <span className="text-accent">LK</span>
+                Fleet Fuel Log System{" "}
+                <span className="text-primary">for Small</span>{" "}
+                <span className="text-accent">Fleets</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-text-muted font-medium mb-3">
-                Fleet fuel and trip logging for Sri Lankan fleets (3–30
-                vehicles)
+                Track trips, fuel, and fleet expenses for Sri Lankan fleets
+                (3–30 vehicles)
               </p>
               <p className="text-sm sm:text-base text-text-muted leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-                Most small fleets lose money because fuel logs are inconsistent,
-                receipts go missing, and weekly reporting turns into a messy
-                spreadsheet job. FuelTrack LK keeps{" "}
+                FuelTrack LK is a fleet fuel log system designed for small and
+                growing fleets. This fuel tracking app for fleets allows
+                businesses to record trips, monitor fuel expenses, and generate
+                weekly fleet reports in one place. Explore all platform
+                capabilities on the{" "}
                 <Link
                   href="/features"
                   className="text-primary font-semibold hover:text-primary-dark underline underline-offset-2 transition-colors"
                 >
-                  trip logs
+                  Features page
                 </Link>
-                , fuel entries, and basic expenses in one place so you can spot
-                mismatches early and keep clean reporting.
+                .
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
@@ -413,11 +416,12 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="reveal text-center mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-text leading-tight mb-3">
-              Why choose <span className="text-primary">FuelTrack LK</span>?
+              Track Trips and Fuel Usage{" "}
+              <span className="text-primary">Easily</span>
             </h2>
             <p className="text-text-muted text-base md:text-lg max-w-2xl mx-auto">
-              Simple tools that make daily logging easy and weekly reporting
-              clear.
+              This trip log system helps fleet operators record vehicle trips,
+              log fuel entries, and maintain accurate records for reporting.
             </p>
           </div>
 
@@ -528,11 +532,11 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-text">
-                  Weekly Reports, No Excel
+                  Simple Fleet Expense Tracking
                 </h3>
                 <p className="text-text-muted text-sm leading-relaxed">
-                  See fuel spend by vehicle and unusual patterns without
-                  rebuilding reports every week.
+                  FuelTrack LK also works as a fleet expense tracker, helping
+                  you monitor fuel costs and improve fuel usage visibility.
                 </p>
               </div>
             </div>
@@ -659,7 +663,7 @@ export default function HomePage() {
 
       {/* ─── Final CTA ─── */}
       <CTASection
-        heading="Want to see how it fits your fleet size?"
+        heading="See the Fleet Fuel Log System in Action"
         description="Book a demo and we'll walk through trip logging, fuel tracking, and weekly reporting for your fleet."
         primaryLabel="Book a Demo"
         primaryHref="/book-a-demo"
