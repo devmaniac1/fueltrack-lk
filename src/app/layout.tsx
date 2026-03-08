@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GA4 from "@/components/GA4";
 import ScrollReveal from "@/components/ScrollReveal";
+import SmoothScroll from "@/components/SmoothScroll";
 import JsonLd from "@/components/JsonLd";
 import { GA_ID } from "@/lib/gtag";
 
@@ -143,6 +144,7 @@ export default function RootLayout({
         <Footer />
         <GA4 />
         <ScrollReveal />
+        <SmoothScroll />
       </body>
     </html>
   );
