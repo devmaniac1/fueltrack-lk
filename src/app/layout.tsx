@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fueltracklk.com"),
+  metadataBase: new URL("https://fueltrack-lk.vercel.app"),
   title: {
     default: "FuelTrack LK | Fleet Fuel & Trip Log for Small Fleets",
     template: "%s | FuelTrack LK",
@@ -25,12 +25,16 @@ export const metadata: Metadata = {
   description:
     "Track trips, fuel refuels, and weekly fleet costs in one place. Built for Sri Lankan fleets with 3–30 vehicles.",
   keywords: [
+    "FuelTrack",
+    "FuelTrack LK",
+    "fuel tracking system",
     "fleet fuel log",
     "trip logging",
     "fleet management Sri Lanka",
     "fuel tracking app",
     "small fleet management",
     "fuel log system",
+    "fuel tracking app for small fleets",
   ],
   openGraph: {
     type: "website",
@@ -55,10 +59,12 @@ const organizationLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "FuelTrack LK",
-  url: "https://fueltracklk.com",
-  logo: "https://fueltracklk.com/images/hero-fleet.png",
+  alternateName: ["FuelTrack", "Fuel Track LK", "FuelTrackLK"],
+  url: "https://fueltrack-lk.vercel.app",
+  logo: "https://fueltrack-lk.vercel.app/images/hero-fleet.png",
   description:
-    "Fleet fuel and trip logging for Sri Lankan fleets with 3–30 vehicles.",
+    "FuelTrack LK is a fuel tracking system for small Sri Lankan fleets with 3–30 vehicles. Track trips, fuel entries, and weekly fleet costs.",
+  sameAs: ["https://fueltrack-lk.vercel.app"],
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@fueltracklk.com",
@@ -70,17 +76,26 @@ const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "FuelTrack LK",
-  url: "https://fueltracklk.com",
+  alternateName: ["FuelTrack", "FuelTrackLK"],
+  url: "https://fueltrack-lk.vercel.app",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://fueltrack-lk.vercel.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const softwareLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "FuelTrack LK",
+  alternateName: "FuelTrack",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
-    "Fleet fuel and trip logging system for small fleets in Sri Lanka.",
+    "FuelTrack LK is a fuel tracking system for small fleets. Record trips, log fuel entries with receipt proof, and generate weekly fleet reports.",
+  keywords:
+    "fuel tracking system, fleet fuel management, trip logging, fuel tracking app for small fleets, vehicle fuel tracking",
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://fueltracklk.com/sitemap.xml",
+    sitemap: "https://fueltrack-lk.vercel.app/sitemap.xml",
   };
 }
