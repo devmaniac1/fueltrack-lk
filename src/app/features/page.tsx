@@ -4,13 +4,16 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Features",
+  title: "Features – Fuel Tracking App for Small Fleets | FuelTrack LK",
   description:
-    "Trip logs, fuel entries with receipt proof, basic expense tracking, and weekly summaries by vehicle. Built for small fleets that need clean reporting.",
+    "FuelTrack LK is a fleet fuel management system with vehicle fuel tracking, trip logging, fuel entries with receipt proof, and weekly fleet reporting. Built for small fleets.",
   keywords: [
     "fuel tracking app for small fleets",
-    "trip log features",
-    "fleet fuel features",
+    "fleet fuel management system",
+    "vehicle fuel tracking",
+    "weekly fleet reporting",
+    "trip logging system",
+    "receipt proof",
   ],
   alternates: { canonical: "/features" },
 };
@@ -217,15 +220,14 @@ export default function FeaturesPage() {
               What&apos;s included
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Everything your fleet <br className="hidden md:block" />
-              <span className="text-primary-light">
-                needs to stay organized
-              </span>
+              Fuel Tracking App <br className="hidden md:block" />
+              <span className="text-primary-light">for Small Fleets</span>
             </h1>
             <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
-              Track trips, fuel, and weekly fleet costs without messy
-              spreadsheets. FuelTrack LK is built for small fleets that need
-              consistency.
+              FuelTrack LK is a fleet fuel management system designed for small
+              and growing fleets. It helps businesses record fuel entries, track
+              vehicle trips, and generate weekly fleet reporting — all in one
+              consistent platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -305,13 +307,13 @@ export default function FeaturesPage() {
                 Core Feature
               </div>
               <h3 className="text-2xl md:text-3xl font-extrabold text-text mb-5 leading-tight">
-                Trip logs per vehicle
+                Trip logging system per vehicle
               </h3>
               <p className="text-text-muted leading-relaxed mb-6">
-                Trips often get recorded differently by different drivers.
-                FuelTrack LK uses one consistent format so each trip includes
-                start, end, purpose, distance, and driver. That keeps reporting
-                fair and searchable.
+                A reliable trip logging system ensures every driver records
+                trips the same way. FuelTrack LK uses one consistent format so
+                each trip includes start, end, purpose, distance, and driver —
+                keeping reporting fair and searchable across your fleet.
               </p>
               <ul className="space-y-3">
                 {[
@@ -376,12 +378,13 @@ export default function FeaturesPage() {
                 Accountability
               </div>
               <h3 className="text-2xl md:text-3xl font-extrabold text-text mb-5 leading-tight">
-                Fuel tracking with receipt proof
+                Vehicle fuel tracking with receipt proof
               </h3>
               <p className="text-text-muted leading-relaxed mb-6">
-                Fuel entries work best when they follow the same routine. Record
-                litres, cost, station, date, and attach proof when needed. This
-                reduces missing receipts without creating a blame culture.
+                Accurate vehicle fuel tracking depends on consistent fuel
+                entries. Record litres, cost, station, date, and attach receipt
+                proof when needed. This approach reduces missing receipts and
+                keeps fuel records transparent without creating a blame culture.
               </p>
               <ul className="space-y-3">
                 {[
@@ -424,13 +427,21 @@ export default function FeaturesPage() {
                 Reporting
               </div>
               <h3 className="text-2xl md:text-3xl font-extrabold text-text mb-5 leading-tight">
-                Weekly summaries you can use
+                Weekly fleet reporting you can use
               </h3>
               <p className="text-text-muted leading-relaxed mb-6">
                 At the end of the week you should be able to answer simple
                 questions: which vehicle spent the most, what changed, and what
-                looks unusual. FuelTrack LK gives a weekly view so you
-                don&apos;t rebuild spreadsheets repeatedly.
+                looks unusual. FuelTrack LK provides weekly fleet reporting so
+                you don&apos;t rebuild spreadsheets repeatedly. Learn more about
+                how the{" "}
+                <Link
+                  href="/"
+                  className="text-primary font-semibold hover:text-primary-dark underline underline-offset-2 transition-colors"
+                >
+                  fleet fuel log system works on the homepage
+                </Link>
+                .
               </p>
               <ul className="space-y-3">
                 {[

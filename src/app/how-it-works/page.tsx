@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -27,7 +26,7 @@ const steps = [
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
       >
         <path
           strokeLinecap="round"
@@ -47,7 +46,7 @@ const steps = [
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
       >
         <path
           strokeLinecap="round"
@@ -67,7 +66,7 @@ const steps = [
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
       >
         <path
           strokeLinecap="round"
@@ -87,7 +86,7 @@ const steps = [
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
       >
         <path
           strokeLinecap="round"
@@ -107,12 +106,77 @@ const steps = [
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.8"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+    ),
+  },
+];
+
+const afterOneWeek = [
+  {
+    title: "Clean trip history",
+    desc: "A searchable record per vehicle with consistent formatting.",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Fuel records with proof",
+    desc: "Receipts attached where needed, reducing missing evidence.",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Weekly view",
+    desc: "A clear summary that makes review fast and actionable.",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
         />
       </svg>
     ),
@@ -140,22 +204,54 @@ const howFaq = [
 export default function HowItWorksPage() {
   return (
     <>
-      {/* ─── Header ─── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <Image
-          src="/images/how-it-works-header.png"
-          alt="Fleet supervisor with checklist near parked delivery vans in tropical setting"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-bg-dark/90 via-primary/70 to-bg-dark/85 z-10" />
-        <div className="relative z-20 max-w-6xl mx-auto px-4 text-center">
+      {/* ─── Hero ─── */}
+      <section
+        className="relative py-24 md:py-32 overflow-hidden"
+        style={{ background: "#111111" }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div
+            className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full"
+            style={{
+              background: "rgba(10, 106, 182, 0.08)",
+              filter: "blur(120px)",
+            }}
+          />
+          <div
+            className="absolute bottom-[-20%] right-[-5%] w-[400px] h-[400px] rounded-full"
+            style={{
+              background: "rgba(245, 158, 11, 0.05)",
+              filter: "blur(100px)",
+            }}
+          />
+        </div>
+        <svg
+          className="absolute inset-0 w-full h-full z-0 opacity-[0.03]"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="hiwGrid"
+              x="0"
+              y="0"
+              width="60"
+              height="60"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="30" cy="30" r="1" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hiwGrid)" />
+        </svg>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              How it works
+            <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-accent bg-accent/10 px-4 py-2 rounded-full mb-6">
+              5-step process
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+              How <span className="text-primary-light">FuelTrack LK</span> works
             </h1>
-            <p className="text-lg text-orange-100 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
               A simple routine your drivers can follow and your managers can
               review weekly.
             </p>
@@ -164,35 +260,29 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── Timeline Steps ─── */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="relative timeline-line space-y-12 md:space-y-16">
+          <div className="space-y-6">
             {steps.map((step, i) => (
               <div
                 key={step.num}
-                className={`reveal relative flex flex-col md:flex-row items-start gap-6 md:gap-12 delay-${(i + 1) * 100} ${
-                  i % 2 === 0 ? "" : "md:flex-row-reverse md:text-right"
-                }`}
+                className="reveal group flex items-start gap-6 p-6 md:p-8 rounded-2xl border border-border bg-white hover:border-primary/30 hover:shadow-xl hover:shadow-primary/8 transition-all duration-500"
+                style={{ transitionDelay: `${i * 0.08}s` }}
               >
-                {/* Number badge */}
-                <div className="flex-shrink-0 relative z-10">
-                  <div className="w-12 h-12 rounded-full gradient-bg-animated flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-primary/30">
-                    {step.num}
+                {/* Number + Icon */}
+                <div className="flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/8 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                    {step.icon}
                   </div>
                 </div>
-                {/* Content */}
-                <div className="flex-1 bg-white rounded-2xl p-6 card-hover border-glow">
-                  <div
-                    className={`flex items-center gap-3 mb-3 ${i % 2 !== 0 ? "md:justify-end" : ""}`}
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-text">
-                      {step.title}
-                    </h3>
-                  </div>
-                  <p className="text-text-muted text-sm leading-relaxed">
+                <div className="flex-1 min-w-0">
+                  <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-primary/50 block mb-1">
+                    Step {step.num}
+                  </span>
+                  <h3 className="text-lg font-bold text-text mb-1 group-hover:text-primary transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-text-muted leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -203,50 +293,56 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ─── After One Week ─── */}
-      <section className="py-16 md:py-24 bg-bg-alt">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="reveal">
-            <SectionHeading title="What you get after one week" />
+      <section className="py-20 md:py-28 bg-bg-alt">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="reveal text-center mb-14">
+            <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary bg-primary/5 px-4 py-2 rounded-full mb-4">
+              Results
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-text leading-tight">
+              What you get after <span className="text-primary">one week</span>
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto reveal delay-200">
-            {[
-              {
-                icon: "📒",
-                title: "Clean trip history",
-                desc: "A searchable record per vehicle with consistent formatting.",
-              },
-              {
-                icon: "⛽",
-                title: "Fuel records with proof",
-                desc: "Receipts attached where needed, reducing missing evidence.",
-              },
-              {
-                icon: "📊",
-                title: "Weekly view",
-                desc: "A clear summary that makes review fast and actionable.",
-              },
-            ].map((item) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+            {afterOneWeek.map((item, i) => (
               <div
                 key={item.title}
-                className="text-center p-8 bg-white rounded-2xl card-hover"
+                className="group relative bg-white rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/8 transition-all duration-500 text-center"
+                style={{ transitionDelay: `${i * 0.1}s` }}
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-text mb-2">{item.title}</h3>
-                <p className="text-sm text-text-muted">{item.desc}</p>
+                <div className="w-14 h-14 rounded-xl bg-primary/8 flex items-center justify-center text-primary mx-auto mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                  {item.icon}
+                </div>
+                <h3 className="font-bold text-text mb-2 group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-text-muted leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── FAQ ─── */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="reveal">
-            <SectionHeading title="Common questions" />
-          </div>
-          <div className="reveal delay-200">
-            <FAQAccordion items={howFaq} />
+      {/* ─── FAQ — Two Column ─── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-16 items-start">
+            <div className="reveal">
+              <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary bg-primary/5 px-4 py-2 rounded-full mb-4">
+                FAQ
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-text leading-tight mb-4">
+                Common <span className="text-primary">questions</span>
+              </h2>
+              <p className="text-text-muted text-sm leading-relaxed">
+                Quick answers about getting started with FuelTrack LK.
+              </p>
+            </div>
+            <div className="reveal">
+              <FAQAccordion items={howFaq} />
+            </div>
           </div>
         </div>
       </section>

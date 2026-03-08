@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
 import PricingCard from "@/components/PricingCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -77,77 +76,186 @@ const pricingFaq = [
   },
 ];
 
+const includedFeatures = [
+  {
+    label: "Clean logs per vehicle",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Consistent entry format",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Export option",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Basic support",
+    icon: (
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        />
+      </svg>
+    ),
+  },
+];
+
 export default function PricingPage() {
   return (
     <>
-      {/* ─── Header ─── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <Image
-          src="/images/pricing-header.png"
-          alt="Clean desk with calculator, notebook, and laptop showing analytics dashboard"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-bg-dark/90 via-primary/70 to-bg-dark/85 z-10" />
-        <div className="relative z-20 max-w-6xl mx-auto px-4 text-center">
+      {/* ─── Hero ─── */}
+      <section
+        className="relative py-24 md:py-32 overflow-hidden"
+        style={{ background: "#111111" }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div
+            className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full"
+            style={{
+              background: "rgba(10, 106, 182, 0.08)",
+              filter: "blur(120px)",
+            }}
+          />
+          <div
+            className="absolute bottom-[-20%] right-[-5%] w-[400px] h-[400px] rounded-full"
+            style={{
+              background: "rgba(245, 158, 11, 0.05)",
+              filter: "blur(100px)",
+            }}
+          />
+        </div>
+        <svg
+          className="absolute inset-0 w-full h-full z-0 opacity-[0.03]"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="prGrid"
+              x="0"
+              y="0"
+              width="60"
+              height="60"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="30" cy="30" r="1" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#prGrid)" />
+        </svg>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              Pricing
+            <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-accent bg-accent/10 px-4 py-2 rounded-full mb-6">
+              Plans & pricing
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+              Simple plans for <br className="hidden md:block" />
+              <span className="text-primary-light">every fleet size</span>
             </h1>
-            <p className="text-lg text-orange-100 max-w-2xl mx-auto">
-              Simple plans based on fleet size. No unnecessary add-ons.
+            <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              FuelTrack LK pricing is based on fleet size so small businesses
+              don&apos;t pay for enterprise complexity.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── Intro ─── */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-2xl mx-auto px-4 text-center reveal">
-          <p className="text-text-muted text-lg leading-relaxed">
-            FuelTrack LK pricing is based on fleet size so small businesses
-            don&apos;t pay for enterprise complexity. If you are unsure, book a
-            demo and we&apos;ll recommend a plan based on your weekly trip
-            volume and reporting needs.
-          </p>
-        </div>
-      </section>
-
       {/* ─── Pricing Cards ─── */}
-      <section className="py-12 md:py-16 bg-bg-alt">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             {plans.map((plan, i) => (
-              <div key={plan.name} className={`reveal delay-${(i + 1) * 100}`}>
+              <div
+                key={plan.name}
+                className="reveal"
+                style={{ transitionDelay: `${i * 0.1}s` }}
+              >
                 <PricingCard {...plan} />
               </div>
             ))}
           </div>
+          <p className="text-center text-sm text-text-muted mt-10 reveal">
+            Not sure which plan? Book a demo and we&apos;ll recommend based on
+            your weekly trip volume.
+          </p>
         </div>
       </section>
 
       {/* ─── What's Included ─── */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="reveal">
-            <SectionHeading
-              title="What's included in every plan"
-              subtitle="Core features available across all tiers."
-            />
+      <section className="py-20 md:py-28 bg-bg-alt">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="reveal text-center mb-14">
+            <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary bg-primary/5 px-4 py-2 rounded-full mb-4">
+              Every plan
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-text leading-tight">
+              What&apos;s <span className="text-primary">included</span> in
+              every plan
+            </h2>
+            <p className="text-text-muted text-base mt-3 max-w-lg mx-auto">
+              Core features available across all tiers.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 reveal delay-200">
-            {[
-              { icon: "📋", label: "Clean logs per vehicle" },
-              { icon: "✅", label: "Consistent entry format" },
-              { icon: "📤", label: "Export option" },
-              { icon: "💬", label: "Basic support" },
-            ].map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 reveal">
+            {includedFeatures.map((item) => (
               <div
                 key={item.label}
-                className="flex items-center gap-3 p-4 bg-bg-alt rounded-xl"
+                className="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-400"
               >
-                <span className="text-2xl">{item.icon}</span>
-                <span className="text-sm font-medium text-text">
+                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+                  {item.icon}
+                </div>
+                <span className="text-sm font-medium text-text group-hover:text-primary transition-colors">
                   {item.label}
                 </span>
               </div>
@@ -156,14 +264,24 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ─── FAQ ─── */}
-      <section className="py-16 md:py-24 bg-bg-alt">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="reveal">
-            <SectionHeading title="Pricing questions" />
-          </div>
-          <div className="reveal delay-200">
-            <FAQAccordion items={pricingFaq} />
+      {/* ─── FAQ — Two Column ─── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-16 items-start">
+            <div className="reveal">
+              <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-primary bg-primary/5 px-4 py-2 rounded-full mb-4">
+                FAQ
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-text leading-tight mb-4">
+                Pricing <span className="text-primary">questions</span>
+              </h2>
+              <p className="text-text-muted text-sm leading-relaxed">
+                Common questions about plans and pricing.
+              </p>
+            </div>
+            <div className="reveal">
+              <FAQAccordion items={pricingFaq} />
+            </div>
           </div>
         </div>
       </section>
