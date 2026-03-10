@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/Logo.png" alt="FuelTrack LK" width="280" />
+</p>
 
-## Getting Started
+<h3 align="center">Fleet Fuel & Trip Log for Small Fleets</h3>
 
-First, run the development server:
+<p align="center">
+  Track trips, fuel refuels, and weekly fleet costs in one place.<br/>
+  Built for Sri Lankan fleets with 3–30 vehicles.
+</p>
+
+<p align="center">
+  <a href="https://fueltrack-lk.vercel.app">🌐 Live Demo</a> &nbsp;·&nbsp;
+  <a href="https://fueltrack-lk.vercel.app/book-a-demo">📅 Book a Demo</a> &nbsp;·&nbsp;
+  <a href="https://fueltrack-lk.vercel.app/free-template">📄 Free Template</a>
+</p>
+
+---
+
+## ✨ Features
+
+- **Trip Logging** — Record every trip with driver, vehicle, and mileage details
+- **Fuel Entry Tracking** — Log fuel refuels with receipt proof uploads
+- **Weekly Fleet Reports** — Auto-generated summaries of fleet costs and usage
+- **Multi-Vehicle Support** — Manage fleets of 3–30 vehicles effortlessly
+- **Responsive Design** — Optimized for desktop, tablet, and mobile
+- **Smooth Animations** — Scroll reveals, hover effects, and micro-interactions powered by Lenis
+
+---
+
+## 📄 Pages
+
+| Page          | Route            | Description                                          |
+| ------------- | ---------------- | ---------------------------------------------------- |
+| Home          | `/`              | Hero section, animated stats, and feature highlights |
+| Features      | `/features`      | Detailed breakdown of all product features           |
+| Pricing       | `/pricing`       | Plans and pricing information                        |
+| How It Works  | `/how-it-works`  | Step-by-step product walkthrough                     |
+| Resources     | `/resources`     | Guides, articles, and helpful resources              |
+| Book a Demo   | `/book-a-demo`   | Schedule a live product demo                         |
+| Free Template | `/free-template` | Download a free fuel log template                    |
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology                                   | Purpose                         |
+| -------------------------------------------- | ------------------------------- |
+| [Next.js 16](https://nextjs.org)             | React framework with App Router |
+| [React 19](https://react.dev)                | UI library                      |
+| [Tailwind CSS 4](https://tailwindcss.com)    | Utility-first styling           |
+| [Lenis](https://lenis.studiofreight.com)     | Smooth scrolling                |
+| [TypeScript](https://www.typescriptlang.org) | Type safety                     |
+| [Vercel](https://vercel.com)                 | Deployment & hosting            |
+
+---
+
+## 🔍 SEO & Analytics
+
+- JSON‑LD structured data (Organization, WebSite, SoftwareApplication)
+- Open Graph & Twitter Card meta tags
+- Dynamic sitemap & robots.txt
+- Google Analytics 4 (GA4) integration
+- Google Tag Manager
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/devmaniac1/fueltrack-lk.git
+cd fueltrack-lk
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+fueltrack-lk/
+├── public/
+│   ├── Logo.png
+│   ├── images/          # Page images & assets
+│   └── assets/          # Additional assets
+├── src/
+│   ├── app/
+│   │   ├── page.tsx             # Home page
+│   │   ├── layout.tsx           # Root layout + SEO
+│   │   ├── globals.css          # Global styles
+│   │   ├── features/            # Features page
+│   │   ├── pricing/             # Pricing page
+│   │   ├── how-it-works/        # How It Works page
+│   │   ├── resources/           # Resources page
+│   │   ├── book-a-demo/         # Book a Demo page
+│   │   ├── free-template/       # Free Template page
+│   │   ├── sitemap.ts           # Dynamic sitemap
+│   │   └── robots.ts            # Robots.txt config
+│   ├── components/              # Reusable UI components
+│   └── lib/                     # Utilities & config
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is deployed on **Vercel** at **[fueltrack-lk.vercel.app](https://fueltrack-lk.vercel.app)**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To deploy your own instance:
+
+1. Push your code to GitHub
+2. Import the repository on [Vercel](https://vercel.com/new)
+3. Vercel auto-detects Next.js and deploys
+
+---
+
+## 📝 License
+
+This project is private and proprietary.
+
+---
+
+<p align="center">
+  Made with ❤️ for Sri Lankan fleet managers
+</p>
