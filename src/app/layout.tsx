@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     title: "FuelTrack LK | Fleet Fuel & Trip Log for Small Fleets",
     description:
       "Track trips, fuel refuels, and weekly fleet costs in one place. Built for Sri Lankan fleets with 3–30 vehicles.",
-    images: [{ url: "/images/hero-fleet.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/icon.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FuelTrack LK | Fleet Fuel & Trip Log for Small Fleets",
     description:
       "Track trips, fuel refuels, and weekly fleet costs in one place. Built for Sri Lankan fleets with 3–30 vehicles.",
-    images: ["/images/hero-fleet.png"],
+    images: ["/images/icon.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -61,7 +61,7 @@ const organizationLd = {
   name: "FuelTrack LK",
   alternateName: ["FuelTrack", "Fuel Track LK", "FuelTrackLK"],
   url: "https://fueltrack-lk.vercel.app",
-  logo: "https://fueltrack-lk.vercel.app/images/hero-fleet.png",
+  logo: "https://fueltrack-lk.vercel.app/images/icon.png",
   description:
     "FuelTrack LK is a fuel tracking system for small Sri Lankan fleets with 3–30 vehicles. Track trips, fuel entries, and weekly fleet costs.",
   sameAs: ["https://fueltrack-lk.vercel.app"],
