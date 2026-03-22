@@ -4,7 +4,7 @@ import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import AnimatedStats from "@/components/AnimatedStats";
-import { event } from "@/lib/gtag";
+import TrackedDemoLink from "@/components/TrackedDemoLink";
 
 export const metadata: Metadata = {
   title: "FuelTrack LK – Fleet Fuel Log System for Small Fleets",
@@ -105,16 +105,9 @@ export default function HomePage() {
                 .
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link
+                <TrackedDemoLink
                   href="/book-a-demo"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-primary rounded-xl btn-shimmer hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20"
-                  onClick={() => {
-                    event({
-                      action: "click",
-                      category: "CTA",
-                      label: "Book a Demo",
-                    });
-                  }}
                 >
                   Book a Demo
                   <svg
@@ -130,7 +123,7 @@ export default function HomePage() {
                       d="M5 12h14M12 5l7 7-7 7"
                     />
                   </svg>
-                </Link>
+                </TrackedDemoLink>
                 <Link
                   href="/free-template"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary border-2 border-primary/30 rounded-xl hover:bg-primary/5 hover:border-primary/50 hover:scale-105 transition-all duration-300"

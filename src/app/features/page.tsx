@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
-import { event } from "@/lib/gtag";
+import TrackedDemoLink from "@/components/TrackedDemoLink";
 
 export const metadata: Metadata = {
   title: "Features – Fuel Tracking App for Small Fleets | FuelTrack LK",
@@ -231,16 +231,9 @@ export default function FeaturesPage() {
               consistent platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <TrackedDemoLink
                 href="/book-a-demo"
                 className="group inline-flex items-center gap-3 bg-accent hover:bg-accent-light text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25"
-                onClick={() => {
-                  event({
-                    action: "click",
-                    category: "CTA",
-                    label: "Book a Demo",
-                  });
-                }}
               >
                 Book a Demo
                 <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
@@ -258,7 +251,7 @@ export default function FeaturesPage() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </TrackedDemoLink>
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white border border-white/15 rounded-full hover:bg-white/5 transition-all duration-300"

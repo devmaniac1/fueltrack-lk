@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { event } from "@/lib/gtag";
+import TrackedDemoLink from "@/components/TrackedDemoLink";
 
 export const metadata: Metadata = {
   title: "Free Fuel Log Template",
@@ -208,19 +208,12 @@ export default function FreeTemplatePage() {
                   </svg>
                 </span>
               </a>
-              <Link
+              <TrackedDemoLink
                 href="/book-a-demo"
                 className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white border border-white/15 rounded-full hover:bg-white/5 transition-all duration-300"
-                onClick={() => {
-                  event({
-                    action: "click",
-                    category: "CTA",
-                    label: "Book a Demo",
-                  });
-                }}
               >
                 Or Book a Demo
-              </Link>
+              </TrackedDemoLink>
             </div>
           </div>
         </div>
