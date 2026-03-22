@@ -4,6 +4,7 @@ import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import AnimatedStats from "@/components/AnimatedStats";
+import { event } from "@/lib/gtag";
 
 export const metadata: Metadata = {
   title: "FuelTrack LK – Fleet Fuel Log System for Small Fleets",
@@ -107,6 +108,13 @@ export default function HomePage() {
                 <Link
                   href="/book-a-demo"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-primary rounded-xl btn-shimmer hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20"
+                  onClick={() => {
+                    event({
+                      action: "click",
+                      category: "CTA",
+                      label: "Book a Demo",
+                    });
+                  }}
                 >
                   Book a Demo
                   <svg

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { event } from "@/lib/gtag";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -47,6 +48,13 @@ export default function Navbar() {
           <Link
             href="/book-a-demo"
             className="ml-4 px-5 py-2.5 text-sm font-semibold text-white rounded-lg gradient-bg-animated btn-shimmer hover:shadow-lg hover:shadow-primary/20 transition-shadow"
+            onClick={() => {
+              event({
+                action: "click",
+                category: "CTA",
+                label: "Book a Demo",
+              });
+            }}
           >
             Book a Demo
           </Link>
@@ -102,8 +110,15 @@ export default function Navbar() {
           ))}
           <Link
             href="/book-a-demo"
-            onClick={() => setMobileOpen(false)}
             className="block mt-2 px-5 py-2.5 text-sm font-semibold text-center text-white rounded-lg gradient-bg-animated"
+            onClick={() => {
+              event({
+                action: "click",
+                category: "CTA",
+                label: "Book a Demo",
+              });
+              setMobileOpen(false);
+            }}
           >
             Book a Demo
           </Link>
