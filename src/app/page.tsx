@@ -107,6 +107,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <TrackedDemoLink
                   href="/book-a-demo"
+                  location="hero_section"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-primary rounded-xl btn-shimmer hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20"
                 >
                   Book a Demo

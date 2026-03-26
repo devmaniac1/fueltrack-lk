@@ -233,6 +233,7 @@ export default function FeaturesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <TrackedDemoLink
                 href="/book-a-demo"
+                location="hero_section"
                 className="group inline-flex items-center gap-3 bg-accent hover:bg-accent-light text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25"
               >
                 Book a Demo

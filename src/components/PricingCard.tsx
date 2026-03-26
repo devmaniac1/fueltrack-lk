@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 interface PricingCardProps {
@@ -69,6 +71,16 @@ export default function PricingCard({
       <Link
         href="/book-a-demo"
         id="demo-cta"
+        onClick={() => {
+          if (typeof window !== "undefined") {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: "cta_click",
+              button_text: "Book a Demo",
+              button_location: "pricing_card",
+            });
+          }
+        }}
         className={`block w-full text-center py-3 rounded-xl font-semibold text-sm btn-shimmer transition-all duration-300 hover:scale-105 ${
           highlighted
             ? "bg-white text-primary-dark hover:bg-orange-50"

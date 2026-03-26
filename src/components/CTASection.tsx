@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 interface CTASectionProps {
@@ -74,6 +76,16 @@ export default function CTASection({
               <Link
                 href={primaryHref}
                 id="demo-cta"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: "cta_click",
+                      button_text: primaryLabel,
+                      button_location: "cta_section",
+                    });
+                  }
+                }}
                 className="group inline-flex items-center gap-3 bg-accent hover:bg-accent-light text-white font-bold text-sm md:text-base px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25"
               >
                 {primaryLabel}

@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { event } from "@/lib/gtag";
+import { pushCTAClick } from "@/lib/gtag";
 
 export default function TrackedDemoLink({
   href,
   className,
   children,
+  location = "page",
 }: {
   href: string;
   className: string;
   children: React.ReactNode;
+  location?: string;
 }) {
   return (
     <Link
@@ -18,11 +20,7 @@ export default function TrackedDemoLink({
       id="demo-cta"
       className={className}
       onClick={() => {
-        event({
-          action: "click",
-          category: "CTA",
-          label: "Book a Demo",
-        });
+        pushCTAClick("Book a Demo", location);
       }}
     >
       {children}

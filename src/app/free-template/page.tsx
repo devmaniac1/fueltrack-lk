@@ -210,6 +210,7 @@ export default function FreeTemplatePage() {
               </a>
               <TrackedDemoLink
                 href="/book-a-demo"
+                location="hero_section"
                 className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white border border-white/15 rounded-full hover:bg-white/5 transition-all duration-300"
               >
                 Or Book a Demo
