@@ -4,11 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import GA4 from "@/components/GA4";
 import ScrollReveal from "@/components/ScrollReveal";
 import SmoothScroll from "@/components/SmoothScroll";
 import JsonLd from "@/components/JsonLd";
-import { GA_ID } from "@/lib/gtag";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -123,22 +121,6 @@ export default function RootLayout({
           content="_u2fOeDffVmJsD2sfFssXMQYfPCwJDijdjjQDosKFhc"
         />
         {/* End Google Tag Manager */}
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', { page_path: window.location.pathname });
-              `}
-            </Script>
-          </>
-        )}
         <JsonLd data={organizationLd} />
         <JsonLd data={websiteLd} />
         <JsonLd data={softwareLd} />
@@ -157,7 +139,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <GA4 />
         <ScrollReveal />
         <SmoothScroll />
       </body>
