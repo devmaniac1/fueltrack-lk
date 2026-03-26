@@ -75,7 +75,6 @@ export default function CTASection({
               {/* Primary Button — pill with circle accent */}
               <Link
                 href={primaryHref}
-                id="demo-cta"
                 onClick={() => {
                   if (typeof window !== "undefined") {
                     window.dataLayer = window.dataLayer || [];

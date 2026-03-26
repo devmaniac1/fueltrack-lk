@@ -70,7 +70,6 @@ export default function PricingCard({
       </ul>
       <Link
         href="/book-a-demo"
-        id="demo-cta"
         onClick={() => {
           if (typeof window !== "undefined") {
             window.dataLayer = window.dataLayer || [];
