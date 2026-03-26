@@ -73,6 +73,7 @@ export default function CTASection({
               {/* Primary Button — pill with circle accent */}
               <Link
                 href={primaryHref}
+                id="demo-cta"
                 className="group inline-flex items-center gap-3 bg-accent hover:bg-accent-light text-white font-bold text-sm md:text-base px-7 py-3.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25"
               >
                 {primaryLabel}

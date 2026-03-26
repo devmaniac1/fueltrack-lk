@@ -68,6 +68,7 @@ export default function PricingCard({
       </ul>
       <Link
         href="/book-a-demo"
+        id="demo-cta"
         className={`block w-full text-center py-3 rounded-xl font-semibold text-sm btn-shimmer transition-all duration-300 hover:scale-105 ${
           highlighted
             ? "bg-white text-primary-dark hover:bg-orange-50"

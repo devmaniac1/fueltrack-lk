@@ -15,6 +15,7 @@ export default function TrackedDemoLink({
   return (
     <Link
       href={href}
+      id="demo-cta"
       className={className}
       onClick={() => {
         event({

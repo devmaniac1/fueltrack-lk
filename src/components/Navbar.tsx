@@ -47,6 +47,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/book-a-demo"
+            id="demo-cta"
             className="ml-4 px-5 py-2.5 text-sm font-semibold text-white rounded-lg gradient-bg-animated btn-shimmer hover:shadow-lg hover:shadow-primary/20 transition-shadow"
             onClick={() => {
               event({
@@ -110,6 +111,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/book-a-demo"
+            id="demo-cta"
             className="block mt-2 px-5 py-2.5 text-sm font-semibold text-center text-white rounded-lg gradient-bg-animated"
             onClick={() => {
               event({
